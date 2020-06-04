@@ -1,5 +1,5 @@
 <?php
 
 echo "自动上线";
-$cmd="cd /wwwroot/sql && git push";
+$cmd="cd /wwwroot/1906/sql-test && git pull";
 shell_exec($cmd);
