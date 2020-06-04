@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shop</title>
+</head>
+<body>
+    商品名称:"二哈"<br>
+    商品价格:"2000"<br>
+    <button id="aaa">秒杀</button>
+</body>
+</html>
+<script src="/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).on('click','#aaa',function(){
+        $.ajax({
+            method:"get",
+            url:"http://sql.1906.com/redis.php",
+            dataType:'json',
+        }).done(function(res){
+            if(res.error=='0'){
+                alert(res.msg);
+                window.location.href('pay.html');
+            }else{
+                alert(res.msg);
+            }
+        });
+    })
+</script>
