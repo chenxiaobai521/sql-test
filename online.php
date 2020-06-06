@@ -1,4 +1,5 @@
 <?php
 
-$cmd='cd /wwwroot/1906/sql-test && git pull master';
-shell_exec($cmd);
+$cmd='cd /wwwroot/1906/sql-test && git pull';
+$res=shell_exec($cmd);
+var_dump($res);
