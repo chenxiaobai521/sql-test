@@ -15,7 +15,7 @@ if($number<1){
     ];
     die(json_encode($data));
 }
-$uid=4;
+$uid=30;
 $res=$redis->sIsMember($users_set,$uid);
 if($res){
     $data=[

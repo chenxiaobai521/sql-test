@@ -17,12 +17,12 @@
     $(document).on('click','#aaa',function(){
         $.ajax({
             method:"get",
-            url:"http://sql.chenenpeng.top/redis.php",
+            url:"http://sql.1906.com/redis.php",
             dataType:'json',
         }).done(function(res){
             if(res.error=='0'){
                 alert(res.msg);
-                window.location.href('/pay.html');
+                window.location.href='http://sql.1906.com/pay.html';
             }else{
                 alert(res.msg);
             }

